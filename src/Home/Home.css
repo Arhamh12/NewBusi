@@ -1,0 +1,77 @@
+.main {
+    display: flex;
+    padding-top: 10rem;
+    overflow: hidden;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+}
+.hero {
+    padding-left: 20%;
+    width: 20%;
+}
+.HeroImg {
+    width: 40rem;
+    padding-right: 20%;
+}
+.HeroTitle {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Desc {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.Btn {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(255, 230, 0);
+    cursor: pointer;
+}
+
+/* Media query for tablet devices */
+@media (max-width: 992px) {
+    .hero {
+        width: 40%; /* Increase width for better fit */
+        padding-left: 10%; /* Adjust padding */
+    }
+    .HeroImg {
+        width: 100%; /* Adjust image to take full width */
+        padding-right: 0; /* Remove padding */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+    .hero {
+        width: 100%; /* Hero takes full width */
+        padding-left: 0; /* Remove padding */
+    }
+    .HeroTitle {
+        font-size: 30px; /* Reduce font size for smaller screens */
+    }
+    .Desc {
+        font-size: 15px; /* Adjust font size for readability */
+    }
+}
+
+/* Media query for extra small devices */
+@media (max-width: 480px) {
+    .HeroTitle {
+        font-size: 24px; /* Further reduce font size */
+    }
+    .Desc {
+        font-size: 14px; /* Further reduce font size for descriptions */
+    }
+    .Btn {
+        padding: 8px; /* Adjust button padding */
+    }
+}

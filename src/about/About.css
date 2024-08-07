@@ -1,0 +1,68 @@
+/* Base styles for layout */
+.boys, .mission, .approach {
+    display: flex;
+    padding-top: 10rem;
+    overflow: hidden;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+}
+.mission{
+    background-color: rgb(255, 230, 0);;
+}
+.boys div, .mission div, .approach div {
+    flex: 1 1 300px; /* Flexible sizing with minimum width */
+}
+
+/* Styles for images */
+.Boys, .meshImg, .ApproachImg {
+    flex: 0 1 40%; /* Flexible sizing with base width */
+    max-width: 40rem;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Information sections */
+.boysInfo, .meshInfo, .approachInfo {
+    flex: 1 1 30%; /* Flexible sizing with minimum width */
+    padding: 0 2%; /* Padding for text separation */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 3rem; /* Base font size */
+    font-family: 'Courier New', Courier, monospace;
+    white-space: normal; /* Ensure text wraps */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 1.5rem; /* Base font size */
+    font-family: 'Courier New', Courier, monospace;
+    white-space: normal; /* Ensure text wraps */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .boys, .mission, .approach {
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+
+    .Boys, .meshImg, .ApproachImg {
+        display: none; /* Hide images on smaller screens */
+    }
+
+    .boysInfo, .meshInfo, .approachInfo {
+        width: 100%; /* Full width for better readability */
+        padding: 0 10px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjusted font size for smaller screens */
+    }
+
+    p {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+    }
+}

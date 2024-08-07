@@ -1,15 +1,13 @@
 import React from "react"
 import { Link, Outlet } from "react-router-dom"
 import './nav.css'
+import logo from './logo.png'
 
 export default function Nav(){
     return (<>
         <nav>
-            <div className="logo">
-                Laundelivery
-            </div>
+            <img src={logo} alt="" className="logo" />
             <div className="MainNav">
-               
                     <div className="menues">
                          <Link to="/Home" style={{ textDecoration: 'none' }}>
                             Home
@@ -20,8 +18,6 @@ export default function Nav(){
                             About us
                         </Link>
                     </div>
-                
-                
                     <div className="menues">
                         <Link to="/Service" style={{ textDecoration: 'none' }}>
                             Services

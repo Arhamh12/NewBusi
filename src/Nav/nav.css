@@ -9,30 +9,39 @@ nav {
     flex-wrap: wrap;
 }
 .logo {
-    font-size: 30px;
+    flex: 0 1 auto; /* Make the logo size more flexible */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center logo vertically within the nav bar */
+    max-width: 120px; /* Set a maximum width for the logo */
     padding: 10px;
+    height: auto; /* Ensure the height adjusts to maintain aspect ratio */
+}
+
+.logo img {
+    width: 100%; /* Make image responsive within the container */
+    height: auto; /* Maintain aspect ratio */
 }
 .logo:hover {
     color: rgb(255, 230, 0);
 }
 .MainNav {
     display: flex;
-    width: 50%;
+    flex: 1 0 50%; /* Allow flexibility in size but start at 50% */
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.menues, .splitMenu {
-    width: 24%;
+.menues {
+    flex: 1 1 20%; /* Allow each menu to shrink and grow as needed */
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    text-wrap: nowrap;
 }
 .Theme, .order {
-    width: 10%;
+    flex: 1 1 10%; /* Allow these elements to shrink and grow as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,39 +61,38 @@ Link {
 /* Responsive design adjustments */
 @media (max-width: 992px) {
     .MainNav, .Theme, .order {
-        width: 100%;
+        width: 100%; /* Full width for medium screens */
         justify-content: center;
     }
     .menues {
-        width: 100%;
+        width: 100%; /* Full width for menu items */
         padding: 10px;
-        text-wrap: nowrap;
+    }
+    .logo {
+        max-width: 100px; /* Slightly smaller logo on medium screens */
     }
 }
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        flex-direction: column; /* Stack all navigation items vertically */
     }
     .logo {
-        width: 100%;
-        text-align: center;
+        max-width: 80px; /* Even smaller logo on small screens */
+        padding: 5px; /* Reduce padding to save space */
     }
     .MainNav {
         flex-direction: column;
     }
-    .splitMenu {
-        flex-direction: column;
-    }
     .menues, .Theme, .order {
-        width: 100%;
-        text-wrap: nowrap;
+        width: 100%; /* Full width for better touch targets */
     }
 }
 @media (max-width: 480px) {
     .logo {
-        font-size: 24px;
+        max-width: 60px; /* Further reduce logo size on very small screens */
+        padding: 2px; /* Minimal padding */
     }
     .menues, .Theme button, .order button {
-        padding: 15px;
+        padding: 15px; /* Larger padding for easier interaction */
     }
 }

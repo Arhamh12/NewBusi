@@ -1,32 +1,32 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
+import express from 'express';
+import { createTransport } from 'nodemailer';
+import cors from 'cors';
+import { json } from 'body-parser';
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(json());
 
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
     service: 'gmail',
     auth: {
-        user: 'your_email@gmail.com',
-        pass: 'your_password'
+        user: 'erhamashamsi@gmail.com',
+        pass: 'your_password'  // Remember to keep your password secure
     }
 });
 
 app.post('/send-email', (req, res) => {
     const { email, lastName, message } = req.body;
     const mailOptions = {
-        from: 'your_email@gmail.com',
+        from: 'erhamashamsi@gmail.com',
         to: email,
         subject: 'Contact Form Submission',
         text: `Message from ${lastName}: ${message}`
     };
 
-    transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
+            console.error(error);
             res.status(500).send('Error sending email');
         } else {
             console.log('Email sent: ' + info.response);
@@ -35,7 +35,7 @@ app.post('/send-email', (req, res) => {
     });
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

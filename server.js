@@ -5,9 +5,7 @@ import pkg from 'body-parser';
 const { json } = pkg;
 
 const app = express();
-app.use(cors({
-    origin: 'https://9000-idx-hama-1723052994590.cluster-p6qcyjpiljdwusmrjxdspyb5m2.cloudworkstations.dev' // your front-end domain
-}));
+app.use(cors());
 app.use(json());
 
 const transporter = createTransport({

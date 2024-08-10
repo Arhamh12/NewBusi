@@ -9,8 +9,8 @@ app.use(express.json());
 const transporter = createTransport({
     service: 'gmail',
     auth: {
-        user: 'your_email@example.com',  // Remember to secure your credentials
-        pass: 'your_password'
+        user: 'erhamashamsi@gmail.com.com',  // Remember to secure your credentials
+        pass: 'qkas ugzp xcim mcnx'
     }
 });
 
@@ -20,10 +20,11 @@ app.get('/', (req, res) => {
 });
 
 app.post('/send-email', (req, res) => {
+
     const { email, lastName, message } = req.body;
 
     const mailOptions = {
-        from: 'your_email@example.com',
+        from: 'erhamashamsi@gmail.com.com',
         to: email,
         subject: 'Contact Form Submission',
         text: `Message from ${lastName}: ${message}`

@@ -2,8 +2,11 @@ import React from "react"
 import { Link, Outlet } from "react-router-dom"
 import './nav.css'
 import logo from './logo.png'
+import { useTheme } from "./ThemeContext";
 
 export default function Nav(){
+
+    const { darkMode, toggleDarkMode } = useTheme();
     return (<>
         <nav>
             <img src={logo} alt="" className="logo" />
@@ -30,8 +33,9 @@ export default function Nav(){
                     </div>
             </div>
             <div className="Theme">
-                <button>Light Mode</button>
-                <button>Dark Mode</button>
+            <button onClick={toggleDarkMode}>
+                        {darkMode ? 'Light Mode' : 'Dark Mode'}
+                    </button>
             </div>
             <div className="order">
                 <button>Order Now!</button>

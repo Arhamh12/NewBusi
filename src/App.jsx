@@ -10,7 +10,6 @@ import { ThemeProvider } from './Nav/ThemeContext';
 import { EmailProvider } from './Contact Us/EmailContext';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

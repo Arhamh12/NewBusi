@@ -14,6 +14,11 @@ const transporter = createTransport({
     }
 });
 
+app.get('/', (req, res) => {
+    console.log('Received GET request');
+    res.send('Hello World!');
+});
+
 app.post('/send-email', (req, res) => {
     const { email, lastName, message } = req.body;
 

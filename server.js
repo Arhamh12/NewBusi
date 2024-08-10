@@ -1,24 +1,24 @@
 import express from 'express';
 import { createTransport } from 'nodemailer';
 import cors from 'cors';
-import { json } from 'body-parser';
 
 const app = express();
 app.use(cors());
-app.use(json());
+app.use(express.json());
 
 const transporter = createTransport({
     service: 'gmail',
     auth: {
-        user: 'erhamashamsi@gmail.com',
-        pass: 'your_password'  // Remember to keep your password secure
+        user: 'your_email@example.com',  // Remember to secure your credentials
+        pass: 'your_password'
     }
 });
 
 app.post('/send-email', (req, res) => {
     const { email, lastName, message } = req.body;
+
     const mailOptions = {
-        from: 'erhamashamsi@gmail.com',
+        from: 'your_email@example.com',
         to: email,
         subject: 'Contact Form Submission',
         text: `Message from ${lastName}: ${message}`

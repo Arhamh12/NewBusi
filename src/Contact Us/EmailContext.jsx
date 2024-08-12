@@ -20,9 +20,15 @@ export const EmailProvider = ({ children }) => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
+            const text = await response.text();
 
-            const data = await response.json();
-            return data;
+            try {
+                const data = JSON.parse(text); 
+                return data;
+            } catch (err) {
+                console.error('Failed to parse JSON:', err);
+                return { success: false, message: text }; 
+            }
         } catch (error) {
             console.error('Error sending email:', error);
             return null; // Handle error conditions here

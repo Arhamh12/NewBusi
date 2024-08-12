@@ -9,7 +9,7 @@ app.use(express.json());
 const transporter = createTransport({
     service: 'gmail',
     auth: {
-        user: 'erhamashamsi@gmail.com',  // Remember to secure your credentials
+        user: 'erhamashamsi@gmail.com',  
         pass: 'qkas ugzp xcim mcnx'
     }
 });
@@ -36,7 +36,7 @@ app.post('/send-email', (req, res) => {
             res.status(500).send('Error sending email');
         } else {
             console.log('Email sent: ' + info.response);
-            res.status(200).send('Email sent');
+            res.status(200).send('Emailsent');
         }
     });
 });

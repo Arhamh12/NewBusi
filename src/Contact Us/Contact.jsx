@@ -16,7 +16,7 @@ export default function Contact() {
 
         const emailData = { email, lastName, message };
         await sendEmail(emailData);
-        // Handle post-send (like showing a message)
+        
     };
 
     return (

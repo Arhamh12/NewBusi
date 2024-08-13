@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./order.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Back({ step, handleBack }) {
     if (step > 1 && step <= 5) {
@@ -49,9 +50,20 @@ export default function Order() {
 
     const handleSubmit = async () => {
         try {
-            await axios.post('https://radiant-basin-85181-d38e6e3dbc1f.herokuapp.com/send-order-email', formData);
-            setStep(step + 1);
-            navigate("/Service");
+            const response = await fetch('https://radiant-basin-85181-d38e6e3dbc1f.herokuapp.com/send-order-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStep(step + 1);
+                navigate("/Service");
+            } else {
+                alert("There was an error sending the email. Please try again later.");
+            }
         } catch (error) {
             console.error("There was an error sending the email!", error);
             alert("There was an error sending the email. Please try again later.");

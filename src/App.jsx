@@ -8,6 +8,10 @@ import Service from './service/Service'
 import Contact from './Contact Us/Contact';
 import { ThemeProvider } from './Nav/ThemeContext';
 import { EmailProvider } from './Contact Us/EmailContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Order from './order/Order';
+
+
 
 function App() {
 
@@ -23,6 +27,7 @@ function App() {
               <Route path="AboutUs" element={<About />} />
               <Route path="Service" element={<Service />} />
               <Route path="Contact" element={<Contact />} />
+              <Route path="Order" element={<Order />} />
             </Routes>
           </EmailProvider>
         </ThemeProvider>

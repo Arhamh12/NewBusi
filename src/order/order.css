@@ -1,0 +1,97 @@
+.form-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: rgb(250, 230, 0);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.checkbox-wrapper-60 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.checkbox-wrapper-60 input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+.checkbox-wrapper-60 *,
+.checkbox-wrapper-60 ::after,
+.checkbox-wrapper-60 ::before {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-60 .check {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-wrapper-60 .label svg {
+    vertical-align: middle;
+}
+
+.checkbox-wrapper-60 .path1 {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    transition: .5s all;
+}
+
+.checkbox-wrapper-60 .check:checked + label svg g path {
+    stroke-dashoffset: 0;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

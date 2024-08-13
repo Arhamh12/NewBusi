@@ -25,16 +25,29 @@ export default function Contact() {
                 <img src={Mail} alt="" className="mailImg" />
                 <div className="Get">
                     <h1 className="title">Get in touch</h1>
-                    <label htmlFor="email"> <HiOutlineMail /> Email:</label>
+                    {/* <label htmlFor="email"> <HiOutlineMail /> Email:</label> */}
                     <br />
-                    <input type="Email" id="email" placeholder="example@example.com" className="input" />
+                    <div className="input-container">
+                        {/* <p>Email:</p> */}
+                        <HiOutlineMail size={30}/>
+                    <input type="Email" id="email"
+                     placeholder="example@example.com"
+                  />
+
+
+                    </div>
+                    {/* <br /> */}
+                    {/* <label htmlFor="lastName">Last Name:</label> */}
                     <br />
-                    <label htmlFor="lastName"><BsPersonFill />Last Name:</label>
+                    <div className="input-container">
+                        {/* <p>Email:</p> */}
+                        <BsPersonFill size={30}/>
+                    <input type="Email" id="email"
+                     placeholder="Last Name"
+                  />
+                  </div>
                     <br />
-                    <input type="text" id="lastName" placeholder="Last Name" className="input" />
-                    <br />
-                    <br />
-                    <textarea id="message" cols="30" rows="10" placeholder="Message" className="message"></textarea>
+                    <textarea id="message" cols="1000" rows="10" placeholder="Message" className="message"></textarea>
                     <br />
                     <button type="submit" className="Btn">Send Message</button>
                 </div>

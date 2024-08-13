@@ -49,10 +49,12 @@ nav {
 }
 .Theme button, .order button {
     border: 1px solid black;
+    color: black;
     border-radius: 20px;
     padding: 10px;
     background-color: rgb(255, 230, 0);
     cursor: pointer;
+    text-wrap: nowrap;
 }
 Link {
     text-decoration: none;

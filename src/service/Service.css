@@ -15,17 +15,19 @@
     padding-left: 10px;
     padding-right: 10px;
     flex-wrap: wrap;
+    row-gap: 5%;
 }
 
 .services {
-    width: 23%; /* Adjusted from 15% to better utilize space on desktop */
-    min-height: 300px; /* Ensuring consistent height */
+    width: 23%; 
+    min-height: 300px;
     background-color: rgb(255, 230, 0);
     padding: 3%;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
     display: flex;
+    border-radius: 40px;
     flex-direction: column;
-    align-items: center; /* Center content */
+    align-items: center; 
     text-align: center;
 }
 

@@ -1,12 +1,12 @@
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
-    --primary-button-bg: #4DA3FF;
+    --primary-button-bg: #ffffff;
 }
 
 body.dark-mode {
     --background-color: #121212;
-    --text-color: #cccccc;
+    --text-color: #000000;
     --primary-button-bg: #26a069; /* Adjusted for your specific color request */
 }
 
@@ -15,8 +15,8 @@ body {
     color: var(--text-color);
 }
 
-.button {
-    background-color: var(--primary-button-bg);
+button.dark-mode {
+    background-color: #26a069;
     border: none;
     color: var(--text-color);
     padding: 10px 20px;

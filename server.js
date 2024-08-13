@@ -41,6 +41,44 @@ app.post('/send-email', (req, res) => {
     });
 });
 
+
+
+app.post('/send-order-email', (req, res) => {
+    const {
+        companyName,
+        email,
+        hardwareUpgrades,
+        cloudManagement,
+        website,
+        inspection
+    } = req.body;
+
+    const mailOptions = {
+        from: 'erhamashamsi@gmail.com',
+        to: 'Arhamh@hamait.net',  // The recipient email
+        subject: 'New Order Submission',
+        text: `
+            Company Name: ${companyName}
+            Email: ${email}
+            Hardware Upgrades: ${hardwareUpgrades.join(', ')}
+            Cloud Management: ${cloudManagement.join(', ')}
+            Website: ${website}
+            Inspection: ${inspection ? 'Yes' : 'No'}
+        `
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error(error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Order email sent: ' + info.response);
+            res.status(200).send('Order email sent successfully');
+        }
+    });
+});
+
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

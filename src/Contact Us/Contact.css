@@ -11,7 +11,21 @@
     padding: 20px; /* Padding for aesthetic spacing */
     box-sizing: border-box; /* Include padding in the width calculation */
 }
+.input-container{
+    background-color: white;
+    display: flex;   
+    border-radius: 20px;
+    padding: 10px;
+    gap:10px
 
+}
+.input-container input{
+    border: none;
+    outline: none;
+}
+.input-container p{
+    font-size: 15px;
+}
 .mailImg {
     width: 40%;
     height: auto;
@@ -36,28 +50,28 @@
 }
 
 .message {
-    height: 100px; /* Specific height for textarea */
+    height: 100px;
+    
 }
 
-/* Responsive Adjustments */
 
 @media (max-width: 768px) {
     .contact {
-        flex-direction: column; /* Stack vertically all elements */
-        width: 80%; /* Increase width to use more screen space */
-        max-width: 100%; /* Ensure it does not exceed the viewport width */
+        flex-direction: column; 
+        width: 80%; 
+        max-width: 100%; 
     }
 
     .mailImg {
-        width: 60%; /* Increase size for better visibility on small screens */
+        width: 60%;  
     }
 
     .get {
-        width: 100%; /* Full width to align with above adjustments */
+        width: 100%;
     }
 
     .input, .message {
-        width: 90%; /* Slightly less than full width for aesthetics */
+        width: 90%;
     }
 }
 

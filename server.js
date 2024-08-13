@@ -55,7 +55,7 @@ app.post('/send-order-email', (req, res) => {
 
     const mailOptions = {
         from: 'erhamashamsi@gmail.com',
-        to: 'Arhamh@hamait.net',  // The recipient email
+        to: 'Arhamh@hamait.net',  
         subject: 'New Order Submission',
         text: `
             Company Name: ${companyName}

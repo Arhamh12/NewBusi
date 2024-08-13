@@ -43,8 +43,19 @@ export default function Order() {
         const { name, value, type, checked } = e.target;
         setFormData((prevData) => ({
             ...prevData,
-            [name]: type === "checkbox" || type === "radio" ? value : checked,
+            [name]: type === "checkbox" ? checked : value,
         }));
+    };
+
+    const handleSubmit = async () => {
+        try {
+            await axios.post('https://radiant-basin-85181-d38e6e3dbc1f.herokuapp.com/send-order-email', formData);
+            setStep(step + 1);
+            navigate("/Service");
+        } catch (error) {
+            console.error("There was an error sending the email!", error);
+            alert("There was an error sending the email. Please try again later.");
+        }
     };
 
     const handleCheckboxChange = (e) => {
@@ -340,7 +351,7 @@ export default function Order() {
                         </button>
                     )}
                     {step === 5 && (
-                        <button type="button" onClick={handleNext}>
+                        <button type="button" onClick={handleSubmit}>
                             Confirm
                         </button>
                     )}

@@ -60,7 +60,6 @@ export default function Order() {
 
             if (response.ok) {
                 setStep(step + 1);
-                navigate("/Service");
             } else {
                 alert("There was an error sending the email. Please try again later.");
             }

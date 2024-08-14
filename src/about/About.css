@@ -1,4 +1,4 @@
-/* Base styles for layout */
+
 .boys, .mission, .approach {
     display: flex;
     padding-top: 10rem;
@@ -12,12 +12,12 @@
     background-color: rgb(255, 230, 0);;
 }
 .boys div, .mission div, .approach div {
-    flex: 1 1 300px; /* Flexible sizing with minimum width */
+    flex: 1 1 300px; 
 }
 
-/* Styles for images */
+
 .Boys, .meshImg, .ApproachImg {
-    flex: 0 1 40%; /* Flexible sizing with base width */
+    flex: 0 1 40%; 
     max-width: 40rem;
     height: auto; /* Maintain aspect ratio */
 }
@@ -27,7 +27,9 @@
     flex: 1 1 30%; /* Flexible sizing with minimum width */
     padding: 0 2%; /* Padding for text separation */
 }
-
+.meshInfo.darkmode{
+    color: black;
+}
 /* Heading styles */
 h1 {
     font-size: 3rem; /* Base font size */

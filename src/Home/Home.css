@@ -41,15 +41,15 @@
     cursor: pointer;
 }
 
-/* Media query for tablet devices */
+
 @media (max-width: 992px) {
     .hero {
-        width: 40%; /* Increase width for better fit */
-        padding-left: 10%; /* Adjust padding */
+        width: 40%; 
+        padding-left: 10%; 
     }
     .HeroImg {
-        width: 100%; /* Adjust image to take full width */
-        padding-right: 0; /* Remove padding */
+        width: 100%; 
+        padding-right: 0;
     }
 }
 

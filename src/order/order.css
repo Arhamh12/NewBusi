@@ -5,7 +5,11 @@
     border-radius: 40px;
     background-color: rgb(250, 230, 0);
 }
-
+.check{
+    margin-left: 3px;
+    background-color: red !important;
+    border: 2px solid red !important;
+}
 h2 {
     margin-bottom: 20px;
     color: #000000;
@@ -20,8 +24,12 @@ h2 {
     margin-bottom: 10px;
     font-weight: bold;
     color: #555;
-}
 
+}
+.input-text{
+
+    margin-left: 10px !important;
+}
 .form-group input[type="text"],
 .form-group input[type="email"] {
     width: 100%;
@@ -36,6 +44,8 @@ h2 {
     position: relative;
     display: block;
     overflow: hidden;
+
+
 }
 
 .checkbox-wrapper-60 input[type="checkbox"] {

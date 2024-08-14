@@ -46,10 +46,10 @@ export default function Contact() {
                     </div>
                     <br />
                     <textarea
+                   
                         id="message"
                         name="message" 
-                        cols="1000"
-                        rows="10"
+                      
                         placeholder="Message"
                         className="message"
                     ></textarea>

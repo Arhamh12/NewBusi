@@ -128,7 +128,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>New PCs</span>
+                                    <span className="input-text">New PCs</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -148,7 +148,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>New Keyboard</span>
+                                    <span className="input-text">New Keyboard</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -168,7 +168,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>Internet connections and router</span>
+                                    <span className="input-text">Internet connections and router</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -188,7 +188,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>New Printer</span>
+                                    <span className="input-text">New Printer</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -208,7 +208,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>New Server</span>
+                                    <span className="input-text">New Server</span>
                                 </label>
                             </div>
                         </div>
@@ -235,7 +235,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>Custom Domain</span>
+                                    <span className="input-text">Custom Domain</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -255,7 +255,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>Email Hosting</span>
+                                    <span className="input-text">Email Hosting</span>
                                 </label>
                             </div>
                             <div className="checkbox-wrapper-60">
@@ -275,7 +275,7 @@ export default function Order() {
                                             <path id="path4146" d="m 55,978 c -73,19 46,71 15,2 C 60,959 13,966 30,1007 c 12,30 61,13 46,-23" fill="none" stroke="black" strokeWidth="3" className="path1" />
                                         </g>
                                     </svg>
-                                    <span>Set-up Outlook OneDrive</span>
+                                    <span className="input-text">Set-up Outlook OneDrive</span>
                                 </label>
                             </div>
                         </div>
